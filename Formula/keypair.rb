@@ -5,22 +5,22 @@
 class Keypair < Formula
   desc ""
   homepage "https://github.com/keypairdev/keypair"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.4_darwin_arm64.tar.gz"
-      sha256 "f7db915b21d39d58117f0db8ff3705cbe21a8cb60b54f9da33ff43108e84e8c0"
+      url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.5_darwin_arm64.tar.gz"
+      sha256 "49c135bdd0eec8610928a8670c034522c8705cee3d05328a6055430f1bd5dc0d"
 
       def install
         bin.install "keypair"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.4_darwin_amd64.tar.gz"
-      sha256 "7c8e46fe3e4246101e3fff7b07cebdc6ce636f32a027177244d273cf8dd17d8d"
+      url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.5_darwin_amd64.tar.gz"
+      sha256 "344d5ca71158eddbf9e185bc0fe545b9b552196a6cd25c637e6a39d7611527dd"
 
       def install
         bin.install "keypair"
@@ -31,5 +31,7 @@ class Keypair < Formula
   service do
     run [opt_bin/"keypair", "server"]
     keep_alive true
+    log_path "#{var}/log/keypair.log"
+    error_log_path "#{var}/log/keypair.log"
   end
 end
