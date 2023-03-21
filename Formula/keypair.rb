@@ -5,22 +5,22 @@
 class Keypair < Formula
   desc ""
   homepage "https://github.com/keypairdev/keypair"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
   depends_on :macos
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/keypairdev/releases/keypair_0.0.3_darwin_arm64.tar.gz"
-      sha256 "2183aa79dfe5427d2be2760aba5801e3bba468935afa68cf30eaa00b428cf3ea"
+      url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.4_darwin_arm64.tar.gz"
+      sha256 "f7db915b21d39d58117f0db8ff3705cbe21a8cb60b54f9da33ff43108e84e8c0"
 
       def install
         bin.install "keypair"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/keypairdev/releases/keypair_0.0.3_darwin_amd64.tar.gz"
-      sha256 "33cf03dbf594afd1427effd63389fb73916c1924240038cba16bed4829af980c"
+      url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.4_darwin_amd64.tar.gz"
+      sha256 "7c8e46fe3e4246101e3fff7b07cebdc6ce636f32a027177244d273cf8dd17d8d"
 
       def install
         bin.install "keypair"
