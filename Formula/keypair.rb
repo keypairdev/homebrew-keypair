@@ -12,7 +12,7 @@ class Keypair < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.9_darwin_arm64.tar.gz"
-      sha256 "3d594f3e025fa890b4607abf3063cf499307b9b25f010998a7b16a24ea1b4e7e"
+      sha256 "7a86c6f732329ef6c0d24367064891d0945c19173cb3adb68d550acccfa89010"
 
       def install
         bin.install "keypair"
@@ -20,7 +20,7 @@ class Keypair < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/keypairdev/releases/raw/main/keypair_0.0.9_darwin_amd64.tar.gz"
-      sha256 "0cd2884969e0b2da134b68642f9eeefb7105bcd39a175d78a7ad552917361b00"
+      sha256 "d6c39406fa7b8a436c79a3efa3d4e536b044bb8524926c90a34b531642a2b371"
 
       def install
         bin.install "keypair"
